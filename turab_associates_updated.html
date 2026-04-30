@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turab & Associates</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {margin:0;font-family:'Inter',sans-serif;background:#0b0b0b;color:#fff;scroll-behavior:smooth;}
+header {text-align:center;padding:80px 20px;background:linear-gradient(135deg,#000,#1a1a1a);animation:fadeIn 2s ease;}
+.logo {width:180px;margin-bottom:20px;filter:drop-shadow(0 0 10px gold);}
+h1 {font-family:'Playfair Display',serif;font-size:48px;color:gold;}
+.tagline {color:#ccc;font-style:italic;}
+section {padding:60px 20px;max-width:1000px;margin:auto;opacity:0;transform:translateY(40px);transition:all 0.8s ease;}
+section.visible {opacity:1;transform:translateY(0);}
+h2 {color:gold;margin-bottom:20px;font-family:'Playfair Display',serif;}
+.card {background:#111;padding:25px;border-radius:12px;border:1px solid gold;margin-bottom:20px;}
+input,textarea {width:100%;padding:12px;margin:10px 0;border:none;border-radius:6px;background:#222;color:#fff;}
+button {background:gold;color:black;padding:12px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:bold;}
+button:hover {background:#d4af37;}
+a {color:gold;}
+footer {text-align:center;padding:20px;background:#000;color:#aaa;}
+@keyframes fadeIn {from{opacity:0;}to{opacity:1;}}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" class="logo">
+<h1>Turab & Associates</h1>
+<p class="tagline">Justice. Integrity. Excellence.</p>
+</header>
+
+<section>
+<h2>About Us</h2>
+<div class="card">
+At Turab & Associates, we are committed to delivering exceptional legal services with professionalism, integrity, and dedication. Our firm specializes in providing strategic legal solutions while upholding the highest standards of advocacy and client confidentiality.
+</div>
+</section>
+
+<section>
+<h2>Our Services</h2>
+<div class="card">
+Civil Law • Criminal Defense • Corporate Advisory • Legal Consultation
+</div>
+</section>
+
+<section>
+<h2>Legal Philosophy</h2>
+<div class="card">
+Fiat Justitia Ruat Caelum — Let justice be done though the heavens fall.<br><br>
+Audi Alteram Partem — Hear the other side.
+</div>
+</section>
+
+<section>
+<h2>Book an Appointment</h2>
+<div class="card">
+
+<form action="https://formspree.io/f/xpwrqkzb" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Case Details" required></textarea>
+  <button type="submit">Book Appointment</button>
+</form>
+
+</div>
+</section>
+
+<section>
+<h2>Contact</h2>
+<div class="card">
+Email: <a href="mailto:sayedahsanabuturabi07@gmail.com">sayedahsanabuturabi07@gmail.com</a><br>
+Instagram: <a href="https://instagram.com/lawyer_ahsan" target="_blank">@lawyer_ahsan</a>
+</div>
+</section>
+
+<footer>
+© 2026 Turab & Associates. All Rights Reserved.
+</footer>
+
+<script>
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const top=sec.getBoundingClientRect().top;
+if(top<window.innerHeight-100){sec.classList.add("visible");}
+});
+});
+</script>
+
+</body>
+</html>
